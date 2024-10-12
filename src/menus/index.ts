@@ -1,5 +1,6 @@
 import type { SideMenu } from '#/public';
 import { demo } from './demo';
+import { kafka } from './kafka';
 
 /**
  * 弃用，改为动态菜单获取，如果需要静态菜单将useCommonStore中的menuList改为defaultMenus
@@ -23,4 +24,5 @@ export const defaultMenus: SideMenu[] = [
     ]
   },
   ...demo as SideMenu[],
+  ...kafka as SideMenu[],
 ];

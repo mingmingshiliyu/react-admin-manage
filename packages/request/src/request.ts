@@ -107,6 +107,7 @@ class AxiosRequest {
    * @param options - 参数
    */
   get<T = object>(url: string, options = {}) {
+    console.log(url)
     return this.instance.get(url, options) as Promise<ServerResult<T>>;
   }
   /**
@@ -115,6 +116,7 @@ class AxiosRequest {
    * @param options - 参数
    */
   post<T = object>(url: string, options = {}, config?: AxiosRequestConfig<object>) {
+    console.log(url)
     return this.instance.post(url, options, config) as Promise<ServerResult<T>>;
   }
   /**
@@ -123,6 +125,7 @@ class AxiosRequest {
    * @param options - 参数
    */
   put<T = object>(url: string, options = {}, config?: AxiosRequestConfig<object>) {
+    console.log(url)
     return this.instance.put(url, options, config) as Promise<ServerResult<T>>;
   }
   /**
@@ -131,6 +134,7 @@ class AxiosRequest {
    * @param options - 参数
    */
   delete<T = object>(url: string, options = {}) {
+    console.log(url)
     return this.instance.delete(url, options) as Promise<ServerResult<T>>;
   }
 }
